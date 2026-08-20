@@ -1,0 +1,7 @@
+{
+  "bundle": "t006_tenure_days",
+  "source_file": "Maya_ Project.sas",
+  "source_blob_sha": "2d58d70a054733be258febcb666271230e4bf132",
+  "source_commit": "f3e03df41225ad9f611adfe9e42fd8e80cd40a15",
+  "notes": "Statistical-analysis question 1 (tenure in days per account): their PROC SORT descending, INTCK('day', actdt, deactdt-or-reference-date) tenure calculation, PROC MEANS summary stats, and their %UNI_ANALYSIS_NUM macro (HBOX boxplot + PROC MEANS) called on TENURE_DAYS -- run unmodified on 10 mock rows (5 active, 5 deactivated) shaped like their SEGMENTS dataset. Manually verified one row (15JAN1999 to 20JUN2000 = 522 days) against the returned tenure_days."
+}

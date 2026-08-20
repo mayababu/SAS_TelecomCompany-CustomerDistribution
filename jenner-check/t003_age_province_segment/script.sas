@@ -1,0 +1,70 @@
+*QUESTION 2;
+ *1.2 What is the age and province distributions of active customers?;
+
+data work.Data;
+input acctno Actdt : mmddyy10. Deactdt : mmddyy10. Province $ Sales;
+format actdt date9. Deactdt date9. Sales dollar11.2;
+datalines;
+10001 01/15/1999 . ON 120.50
+10002 02/10/1999 . BC 450.00
+10003 03/05/1999 12/01/1999 QC 800.25
+10004 04/22/1999 . AB 45.00
+10005 05/18/1999 . NS 999.99
+10006 06/01/1999 09/10/2000 ON 300.00
+10007 07/14/1999 . BC 150.75
+10008 08/09/1999 . QC 700.00
+10009 09/25/1999 03/14/2000 AB 500.50
+10010 10/30/1999 . NS 88.00
+10011 11/11/1999 . ON 650.00
+10012 12/05/1999 04/18/2000 BC 210.00
+10013 01/20/2000 . QC 999.00
+10014 02/14/2000 . AB 333.33
+10015 03/08/2000 07/30/2000 NS 120.00
+;
+run;
+
+data work.Account_segment ;
+set work.Data;
+length Age_Group $25;
+array ages{15} _temporary_ (18 25 33 45 19 52 61 29 70 22 38 65 41 27 58);
+Age = ages{_n_};
+ IF AGE <= 20 THEN AGE_GROUP  = "LESS THAN 20";
+ ELSE IF  21<= AGE<=40 THEN AGE_GROUP = "BETWEEN 21 AND 40 ";
+ ELSE IF 41<=AGE <=59 THEN AGE_GROUP ="BETWEEN 41 AND 60";
+ ELSE IF AGE >= 60 THEN AGE_GROUP = "60 AND ABOVE";
+ RUN;
+
+proc print data = work.Account_segment (obs=20);
+run;
+
+ Title"Age distributions of active customers";
+
+PROC SQL ;
+CREATE TABLE AGEDIST AS
+SELECT AGE_GROUP,
+       (COUNT(Actdt) - COUNT(Deactdt))AS TOTAL_ACTIVE_CUSTOMERS,
+	   SUM(SALES) AS TOTAL_SALES
+FROM WORK.ACCOUNT_SEGMENT
+WHERE DEACTDT IS NULL
+GROUP BY AGE_GROUP
+ORDER BY AGE_GROUP;
+QUIT;
+
+PROC PRINT DATA = AGEDIST;
+RUN;
+*=====================================================================================;
+PROC SQL ;
+CREATE TABLE PROVINDIST AS
+SELECT PROVINCE,
+       (COUNT(Actdt) - COUNT(Deactdt))AS TOTAL_ACTIVE_CUSTOMERS,
+	   SUM(SALES) AS TOTAL_SALES
+FROM WORK.ACCOUNT_SEGMENT
+WHERE DEACTDT IS NULL AND PROVINCE IS NOT NULL
+GROUP BY PROVINCE
+ORDER BY PROVINCE;
+QUIT;
+
+PROC PRINT DATA = PROVINDIST;
+WHERE PROVINCE IS NOT NULL;
+RUN;
+title;

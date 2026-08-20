@@ -1,0 +1,32 @@
+                                                Number of missing values
+
+                                                  The MEANS Procedure
+
+ Variable   N Miss
+ -----------------
+ acctno          0
+ Age             2
+ -----------------
+
+                                                Number of missing values
+
+Province  deactreason  rateplan  dealertype
+--------  -----------  --------  ----------
+       1            0         0           0
+                                                Number of missing values
+
+                                                Number of missing values
+
+
+  Obs  acctno  deactreason  rateplan  dealertype  age  province  New_age
+    1   10001  VOL          A1        DL           34  ON             34
+    2   10002  CRD          B2        DL            .  BC             36
+    3   10003  FRD          A1        RT           52  QC             52
+    4   10004  A1           C3        DL           18  AB             18
+    5   10005  VOL          B2        RT           67  NS             67
+    6   10006  CRD          A1        DL           45                 45
+    7   10007  FRD          C3        RT           23  BC             23
+    8   10008  VOL          B2        DL           38  QC             38
+    9   10009  A1           A1        RT            .  AB             36
+   10   10010  CRD          C3        DL           27  NS             27
+

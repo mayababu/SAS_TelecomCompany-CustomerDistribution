@@ -1,0 +1,28 @@
+NOTE: Option OBS changed to 100.
+NOTE: DATA work.data
+
+NOTE: Processing inline DATALINES (20 lines)
+
+NOTE: Read 20 rows from DATALINES.
+NOTE: Wrote work.data (20 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: Option TITLE changed to SEGMENTATION BASED ON AGE , SALES and PROVINCE.
+NOTE: DATA WORK.SEGMENTS
+
+
+NOTE: Read 20 rows from WORK.data.
+NOTE: Wrote WORK.SEGMENTS (20 rows, 7 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC PRINT data=WORK.SEGMENTS
+
+NOTE: PROC PRINT completed: 20 observations printed, 7 variables
+NOTE: Option TITLE changed to SALES BASED ON DIFFERENT AGE GROUPS.
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: Option TITLE changed to SALES BASED ON DIFFERENT PROVINCE.
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.

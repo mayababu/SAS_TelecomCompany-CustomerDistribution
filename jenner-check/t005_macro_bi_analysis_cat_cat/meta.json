@@ -1,0 +1,7 @@
+{
+  "bundle": "t005_macro_bi_analysis_cat_cat",
+  "source_file": "Maya_ Project.sas",
+  "source_blob_sha": "2d58d70a054733be258febcb666271230e4bf132",
+  "source_commit": "f3e03df41225ad9f611adfe9e42fd8e80cd40a15",
+  "notes": "Exercises their reusable %BI_ANALYSIS_CAT_CAT macro (PROC FREQ CHISQ crosstab + PROC SGPLOT clustered bar, both parameterized on DSN/VAR1/VAR2) with two calls -- age-group-by-sales-group and sales-group-by-province -- against 15 mock segmented rows shaped like their SEGMENTS dataset (delimited datalines, since the macro's variables contain embedded spaces and dollar signs)."
+}

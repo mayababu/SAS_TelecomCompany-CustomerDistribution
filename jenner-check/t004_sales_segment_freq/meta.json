@@ -1,0 +1,7 @@
+{
+  "bundle": "t004_sales_segment_freq",
+  "source_file": "Maya_ Project.sas",
+  "source_blob_sha": "2d58d70a054733be258febcb666271230e4bf132",
+  "source_commit": "f3e03df41225ad9f611adfe9e42fd8e80cd40a15",
+  "notes": "Question 3 (age/sales/province segmentation): their AGE_GROUP/SALES_GROUP/PROVINCEE bucketing DATA step (identical IF/ELSE IF thresholds -- <$100, $100-500, $500-800, $800+, plus the AB/BC/NS/ON/QC province name lookup) and both PROC FREQ CHISQ crosstabs, run unmodified on 20 mock rows spanning every age and sales bucket."
+}
