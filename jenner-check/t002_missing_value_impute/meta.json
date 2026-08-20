@@ -1,0 +1,7 @@
+{
+  "bundle": "t002_missing_value_impute",
+  "source_file": "Maya_ Project.sas",
+  "source_blob_sha": "2d58d70a054733be258febcb666271230e4bf132",
+  "source_commit": "f3e03df41225ad9f611adfe9e42fd8e80cd40a15",
+  "notes": "Missing-value handling: their PROC MEANS NMISS + PROC SQL NMISS() checks, then the COALESCE(AGE,MEDIAN(AGE)) imputation into New_Age, run unmodified against 10 mock rows (2 with missing Age) built to the same fixed-column shape as the original INFILE layout."
+}

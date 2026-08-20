@@ -1,0 +1,7 @@
+{
+  "bundle": "t007_account_status_ttest",
+  "source_file": "Maya_ Project.sas",
+  "source_blob_sha": "2d58d70a054733be258febcb666271230e4bf132",
+  "source_commit": "f3e03df41225ad9f611adfe9e42fd8e80cd40a15",
+  "notes": "Statistical-analysis questions 3-6: Account_Status/Tenure_Segment bucketing DATA step, PROC FREQ, their %BI_ANALYSIS_CAT_CAT macro (CLASS/VAR CHISQ+SGPLOT variant) on Tenure_Segment by Account_Status, and their %BI_ANALYSIS_NUMs_CAT_TTEST macro (PROC TTEST) comparing Sales between Active and DeActivated accounts -- run unmodified on 12 mock rows split evenly active/deactivated."
+}

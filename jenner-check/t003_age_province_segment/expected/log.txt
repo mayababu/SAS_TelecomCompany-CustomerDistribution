@@ -1,0 +1,36 @@
+NOTE: Option OBS changed to 100.
+NOTE: DATA work.data
+
+NOTE: Processing inline DATALINES (15 lines)
+
+NOTE: Read 15 rows from DATALINES.
+NOTE: Wrote work.data (15 rows, 5 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA work.Account_segment
+
+
+NOTE: Read 15 rows from work.data.
+NOTE: Wrote work.Account_segment (15 rows, 7 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC PRINT data=work.Account_segment
+
+NOTE: PROC PRINT completed: 15 observations printed, 7 variables
+NOTE: Option TITLE changed to Age distributions of active customers.
+NOTE: PROC SQL 
+
+NOTE: Table AGEDIST created.
+NOTE: PROC SQL statement used.
+NOTE: PROC PRINT data=AGEDIST
+
+NOTE: PROC PRINT completed: 4 observations printed, 3 variables
+NOTE: PROC SQL 
+
+NOTE: Table PROVINDIST created.
+NOTE: PROC SQL statement used.
+NOTE: PROC PRINT data=PROVINDIST
+
+NOTE: PROC PRINT completed: 5 observations printed, 3 variables

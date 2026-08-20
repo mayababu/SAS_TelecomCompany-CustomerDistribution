@@ -1,0 +1,12 @@
+{
+  "_captured_at": "2026-08-20T07:15:57Z",
+  "_captured_run_id": "r_36fd38f925414ec6afd84ea000a92358",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote work.tenure (10 rows, 4 columns).",
+    "NOTE: PROC SGPLOT output written to: ./ods_output/sgplot.svg"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

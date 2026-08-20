@@ -1,0 +1,7 @@
+{
+  "bundle": "t003_age_province_segment",
+  "source_file": "Maya_ Project.sas",
+  "source_blob_sha": "2d58d70a054733be258febcb666271230e4bf132",
+  "source_commit": "f3e03df41225ad9f611adfe9e42fd8e80cd40a15",
+  "notes": "Question 2 (age/province distribution of active customers): their AGE_GROUP bucketing DATA step plus the two PROC SQL aggregations (active-customer count via COUNT(Actdt)-COUNT(Deactdt), summed Sales), run on 15 mock rows built to the script's Actdt/Deactdt/Province/Sales shape. The original WHERE clause used a comma between two predicates (WHERE deactdt is null, province is not null), which is invalid SAS (confirmed against SAS 9.4 PROC SQL WHERE-clause syntax, and reproducing it against Jenner throws the same parse error real SAS would) -- corrected to AND. PROC GCHART pie-chart steps were left out since they render graphics rather than exercise data logic; the PRINT/SQL steps carry the same distributions."
+}

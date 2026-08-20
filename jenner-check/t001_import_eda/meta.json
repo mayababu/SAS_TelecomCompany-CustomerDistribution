@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_import_eda",
+  "source_file": "Maya_ Project.sas",
+  "source_blob_sha": "2d58d70a054733be258febcb666271230e4bf132",
+  "source_commit": "f3e03df41225ad9f611adfe9e42fd8e80cd40a15",
+  "notes": "Data import + EDA: the fixed-column INPUT statement from the original INFILE step (acctno/actdt/Deactdt/Deactreason/GoodCredit/Rateplan/DealerType/Age/Province/Sales), fed via inline DATALINES sized to the same column layout (hardcoded C:\\DSA path and external .txt replaced with 20 mock rows) since the runner uploads no data files; followed by their PROC PRINT/CONTENTS/FREQ EDA steps unmodified."
+}

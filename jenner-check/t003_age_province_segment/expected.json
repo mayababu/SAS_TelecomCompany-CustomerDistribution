@@ -1,0 +1,13 @@
+{
+  "_captured_at": "2026-08-20T07:13:25Z",
+  "_captured_run_id": "r_c700f1ea655141309d23c8bec70b73c6",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote work.Account_segment (15 rows, 7 columns).",
+    "NOTE: Table AGEDIST created.",
+    "NOTE: Table PROVINDIST created."
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

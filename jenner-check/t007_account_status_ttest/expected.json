@@ -1,0 +1,13 @@
+{
+  "_captured_at": "2026-08-20T07:16:50Z",
+  "_captured_run_id": "r_500d13b4d21f4cc18f2d4c063379602c",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote work.Account_segment (12 rows, 6 columns).",
+    "NOTE: PROC TTEST data=work.Account_segment",
+    "NOTE: PROC TTEST statement used."
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

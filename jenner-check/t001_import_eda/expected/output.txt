@@ -1,0 +1,235 @@
+                                              Importing Data Set in to SAS
+
+
+  Obs          acctno      actdt    Deactdt  Deactreason  GoodCredit  Rateplan  DealerType  Age  Province    Sales
+    1           10001  15JAN1999  20JUN2000  VOL                   1  A1        DL           34  ON        $120.50
+    2           10002  10FEB1999          .  CRD                   1  B2        DL           29  BC        $450.00
+    3           10003  05MAR1999  01DEC1999  FRD                   0  A1        RT           52  QC        $800.25
+    4           10004  22APR1999          .  A1                    1  C3        DL           18  AB         $45.00
+    5           10005  18MAY1999  10SEP2000  VOL                   1  B2        RT           67  NS        $999.99
+    6           10006  01JUN1999          .  CRD                   0  A1        DL           45  ON        $300.00
+    7           10007  14JUL1999  22JAN2000  FRD                   1  C3        RT           23  BC        $150.75
+    8           10008  09AUG1999          .  VOL                   1  B2        DL           38  QC        $700.00
+    9           10009  25SEP1999  14MAR2000  A1                    0  A1        RT           60  AB        $500.50
+   10           10010  30OCT1999          .  CRD                   1  C3        DL           27  NS         $88.00
+
+... 10 more observations (showing 10 of 20)
+
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: work.Details
+Observations:  20
+Variables:     10
+
+Variables (in creation order):
+
+  #  Variable     Type    Len  Format      Label
+---  -----------  ----  -----  ----------  -----
+  1  acctno        Num      8  14.0        
+  2  actdt         Num      8  DATE9.      
+  3  Deactdt       Num      8  DATE9.      
+  4  Deactreason  Char      5              
+  5  GoodCredit    Num      8              
+  6  Rateplan     Char      2              
+  7  DealerType   Char      2              
+  8  Age           Num      8              
+  9  Province     Char      2              
+ 10  Sales         Num      8  DOLLAR11.2  
+
+-------------------------------------------------------------------------------
+
+                                   Number of unique distinct values in each variables
+
+                                                   The FREQ Procedure
+
+Number of Variable Levels
+
+Variable                 Levels
+--------------------------------
+acctno                       20
+actdt                        20
+Deactdt                      10
+Deactreason                   4
+GoodCredit                    2
+Rateplan                      3
+DealerType                    2
+Age                          20
+Province                      5
+Sales                        20
+
+
+                                    Cumulative    Cumulative
+acctno    Frequency    Percent     Frequency      Percent
+---------------------------------------------------------------
+10001             1      5.00            1         5.00
+10002             1      5.00            2        10.00
+10003             1      5.00            3        15.00
+10004             1      5.00            4        20.00
+10005             1      5.00            5        25.00
+10006             1      5.00            6        30.00
+10007             1      5.00            7        35.00
+10008             1      5.00            8        40.00
+10009             1      5.00            9        45.00
+10010             1      5.00           10        50.00
+10011             1      5.00           11        55.00
+10012             1      5.00           12        60.00
+10013             1      5.00           13        65.00
+10014             1      5.00           14        70.00
+10015             1      5.00           15        75.00
+10016             1      5.00           16        80.00
+10017             1      5.00           17        85.00
+10018             1      5.00           18        90.00
+10019             1      5.00           19        95.00
+10020             1      5.00           20       100.00
+
+                                       Cumulative    Cumulative
+actdt        Frequency    Percent     Frequency      Percent
+------------------------------------------------------------------
+15JAN1999            1      5.00            1         5.00
+10FEB1999            1      5.00            2        10.00
+05MAR1999            1      5.00            3        15.00
+22APR1999            1      5.00            4        20.00
+18MAY1999            1      5.00            5        25.00
+01JUN1999            1      5.00            6        30.00
+14JUL1999            1      5.00            7        35.00
+09AUG1999            1      5.00            8        40.00
+25SEP1999            1      5.00            9        45.00
+30OCT1999            1      5.00           10        50.00
+11NOV1999            1      5.00           11        55.00
+05DEC1999            1      5.00           12        60.00
+20JAN2000            1      5.00           13        65.00
+14FEB2000            1      5.00           14        70.00
+08MAR2000            1      5.00           15        75.00
+19APR2000            1      5.00           16        80.00
+23MAY2000            1      5.00           17        85.00
+17JUN2000            1      5.00           18        90.00
+02JUL2000            1      5.00           19        95.00
+28AUG2000            1      5.00           20       100.00
+
+                                       Cumulative    Cumulative
+Deactdt      Frequency    Percent     Frequency      Percent
+------------------------------------------------------------------
+01DEC1999            1     10.00            1        10.00
+22JAN2000            1     10.00            2        20.00
+14MAR2000            1     10.00            3        30.00
+18APR2000            1     10.00            4        40.00
+20JUN2000            1     10.00            5        50.00
+30JUL2000            1     10.00            6        60.00
+10SEP2000            1     10.00            7        70.00
+12OCT2000            1     10.00            8        80.00
+29NOV2000            1     10.00            9        90.00
+15DEC2000            1     10.00           10       100.00
+
+                                         Cumulative    Cumulative
+Deactreason    Frequency    Percent     Frequency      Percent
+--------------------------------------------------------------------
+A1                     4     20.00            4        20.00
+CRD                    6     30.00           10        50.00
+FRD                    4     20.00           14        70.00
+VOL                    6     30.00           20       100.00
+
+                                        Cumulative    Cumulative
+GoodCredit    Frequency    Percent     Frequency      Percent
+-------------------------------------------------------------------
+0                     6     30.00            6        30.00
+1                    14     70.00           20       100.00
+
+                                      Cumulative    Cumulative
+Rateplan    Frequency    Percent     Frequency      Percent
+-----------------------------------------------------------------
+A1                  8     40.00            8        40.00
+B2                  6     30.00           14        70.00
+C3                  6     30.00           20       100.00
+
+                                        Cumulative    Cumulative
+DealerType    Frequency    Percent     Frequency      Percent
+-------------------------------------------------------------------
+DL                   11     55.00           11        55.00
+RT                    9     45.00           20       100.00
+
+                                 Cumulative    Cumulative
+Age    Frequency    Percent     Frequency      Percent
+------------------------------------------------------------
+18             1      5.00            1         5.00
+19             1      5.00            2        10.00
+22             1      5.00            3        15.00
+23             1      5.00            4        20.00
+27             1      5.00            5        25.00
+29             1      5.00            6        30.00
+30             1      5.00            7        35.00
+34             1      5.00            8        40.00
+36             1      5.00            9        45.00
+38             1      5.00           10        50.00
+41             1      5.00           11        55.00
+44             1      5.00           12        60.00
+45             1      5.00           13        65.00
+48             1      5.00           14        70.00
+52             1      5.00           15        75.00
+55             1      5.00           16        80.00
+58             1      5.00           17        85.00
+60             1      5.00           18        90.00
+63             1      5.00           19        95.00
+67             1      5.00           20       100.00
+
+                                      Cumulative    Cumulative
+Province    Frequency    Percent     Frequency      Percent
+-----------------------------------------------------------------
+AB                  4     20.00            4        20.00
+BC                  4     20.00            8        40.00
+NS                  4     20.00           12        60.00
+ON                  4     20.00           16        80.00
+QC                  4     20.00           20       100.00
+
+                                     Cumulative    Cumulative
+Sales      Frequency    Percent     Frequency      Percent
+----------------------------------------------------------------
+$45.00             1      5.00            1         5.00
+$88.00             1      5.00            2        10.00
+$95.00             1      5.00            3        15.00
+$120.00            1      5.00            4        20.00
+$120.50            1      5.00            5        25.00
+$150.75            1      5.00            6        30.00
+$210.00            1      5.00            7        35.00
+$300.00            1      5.00            8        40.00
+$333.33            1      5.00            9        45.00
+$405.00            1      5.00           10        50.00
+$450.00            1      5.00           11        55.00
+$500.50            1      5.00           12        60.00
+$540.00            1      5.00           13        65.00
+$610.00            1      5.00           14        70.00
+$650.00            1      5.00           15        75.00
+$700.00            1      5.00           16        80.00
+$780.00            1      5.00           17        85.00
+$800.25            1      5.00           18        90.00
+$999.00            1      5.00           19        95.00
+$999.99            1      5.00           20       100.00
+                                   Number of unique distinct values in each variables
+
+                                                   The FREQ Procedure
+
+Deactreason    Frequency
+-------------------------
+A1                     4
+CRD                    6
+FRD                    4
+VOL                    6
+
+DealerType    Frequency
+------------------------
+DL                   11
+RT                    9
+
+Province    Frequency
+----------------------
+AB                  4
+BC                  4
+NS                  4
+ON                  4
+QC                  4
+
+GoodCredit    Frequency
+------------------------
+0                     6
+1                    14

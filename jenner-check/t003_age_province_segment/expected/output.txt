@@ -1,0 +1,41 @@
+
+  Obs           Age_Group  acctno      Actdt    Deactdt  Province    Sales  Age
+    1  LESS THAN 20         10001  15JAN1999          .  ON        $120.50   18
+    2  BETWEEN 21 AND 40    10002  10FEB1999          .  BC        $450.00   25
+    3  BETWEEN 21 AND 40    10003  05MAR1999  01DEC1999  QC        $800.25   33
+    4  BETWEEN 41 AND 60    10004  22APR1999          .  AB         $45.00   45
+    5  LESS THAN 20         10005  18MAY1999          .  NS        $999.99   19
+    6  BETWEEN 41 AND 60    10006  01JUN1999  10SEP2000  ON        $300.00   52
+    7  60 AND ABOVE         10007  14JUL1999          .  BC        $150.75   61
+    8  BETWEEN 21 AND 40    10008  09AUG1999          .  QC        $700.00   29
+    9  60 AND ABOVE         10009  25SEP1999  14MAR2000  AB        $500.50   70
+   10  BETWEEN 21 AND 40    10010  30OCT1999          .  NS         $88.00   22
+   11  BETWEEN 21 AND 40    10011  11NOV1999          .  ON        $650.00   38
+   12  60 AND ABOVE         10012  05DEC1999  18APR2000  BC        $210.00   65
+   13  BETWEEN 41 AND 60    10013  20JAN2000          .  QC        $999.00   41
+   14  BETWEEN 21 AND 40    10014  14FEB2000          .  AB        $333.33   27
+   15  BETWEEN 41 AND 60    10015  08MAR2000  30JUL2000  NS        $120.00   58
+
+                                         Age distributions of active customers
+
+                                         Age distributions of active customers
+
+
+  Obs           Age_Group  TOTAL_ACTIVE_CUSTOMERS  TOTAL_SALES
+    1  60 AND ABOVE                             1       150.75
+    2  BETWEEN 21 AND 40                        5      2221.33
+    3  BETWEEN 41 AND 60                        2         1044
+    4  LESS THAN 20                             2      1120.49
+
+                                         Age distributions of active customers
+
+                                         Age distributions of active customers
+
+
+  Obs  Province  TOTAL_ACTIVE_CUSTOMERS  TOTAL_SALES
+    1  AB                             2       378.33
+    2  BC                             2       600.75
+    3  NS                             2      1087.99
+    4  ON                             2        770.5
+    5  QC                             2         1699
+
